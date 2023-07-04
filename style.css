@@ -1,0 +1,138 @@
+:root {
+  /* ## Colors */
+
+  /* ### Primary */
+
+  --Pale-blue: hsl(225, 100%, 94%);
+  --Bright-blue: hsl(245, 75%, 52%);
+
+  /* ### Neutral */
+
+  --Very-pale-blue: hsl(225, 100%, 98%);
+  --Desaturated-blue: hsl(224, 23%, 55%);
+  --Dark-blue: hsl(223, 47%, 23%);
+}
+
+/****** TAG SELECTOR *****/
+
+/* Gracias a estas propiedades, pude centralizar el contenido dentro
+de el espacio gris que contiene los detalles del plan. */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Red Hat Display", sans-serif;
+}
+h5 {
+  color: var(--Desaturated-blue);
+}
+h5:hover {
+  cursor: pointer;
+  color: rgba(105, 74, 244, 0.754);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--Pale-blue);
+  background: #e0e8ff url(/images/pattern-background-desktop.svg);
+  background-size: auto 60%;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+/***** CLASS SELECTOR *****/
+
+/* BODY */
+.card {
+  border-radius: 15px;
+  background-color: white;
+  max-width: 400px;
+  height: 630px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  box-shadow: 0 13px 2em rgba(35, 41, 203, 0.2);
+}
+
+/* THE IMAGE */
+.picture {
+  width: 100%;
+  border-radius: 15px 15px 0 0;
+}
+
+/* ALL THE INFORMATION */
+.summary {
+  font-size: 25px;
+  font-weight: 900;
+  margin-top: 2rem;
+}
+.text {
+  color: var(--Desaturated-blue);
+  padding: 5px 10px;
+  font-size: 16px;
+  opacity: 0.7;
+  margin: 8px 2.5rem;
+}
+
+/* SELECTED TAGS */
+.card .plan {
+  margin: 0 2.5rem;
+  padding: 0.7rem;
+  height: 6rem;
+  background-color: var(--Very-pale-blue);
+  opacity: 0.8;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  border-radius: 10px;
+}
+.plan a {
+  margin-left: 60px;
+}
+.plan p {
+  color: var(--Desaturated-blue);
+  opacity: 0.9;
+}
+.plan a:hover {
+  color: rgba(105, 74, 244, 0.754);
+}
+
+/* BUTTON */
+.button {
+  background-color: var(--Bright-blue);
+  color: var(--Very-pale-blue);
+  margin: 1rem 2.5rem;
+  height: 2.8rem;
+  border-radius: 10px;
+  border: none;
+  /* Para la sombra, hay que tomar en cuenta cada uno de sus 4 fases.
+  La primera es la HORIZONTAl, la segunda es VERTICAL la tercera es el BLUR,
+  La cuarta el color y su transparencia. */
+  box-shadow: 0 13px 2em rgba(35, 41, 203, 0.2);
+}
+
+.button:hover {
+  background-color: rgba(105, 74, 244, 0.754);
+  cursor: pointer;
+}
+
+@media (max-width: 375px) {
+  .card {
+    border-radius: 15px;
+    min-width: 370px;
+    height: 630px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    box-shadow: 0 13px 2em rgba(35, 41, 203, 0.2);
+  }
+  .plan a {
+    margin-left: 30px;
+  }
+  body {
+    background-image: url(images/pattern-background-mobile.svg);
+  }
+}
