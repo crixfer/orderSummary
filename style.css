@@ -37,7 +37,7 @@ body {
   align-items: center;
   height: 100vh;
   background-color: var(--Pale-blue);
-  background: #e0e8ff url(/images/pattern-background-desktop.svg);
+  background: #e0e8ff url(images/pattern-background-desktop.svg);
   background-size: auto 60%;
   background-repeat: no-repeat;
   text-align: center;
